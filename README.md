@@ -2,7 +2,7 @@
 
 # Screenshots
 
-![Robot-html-report](https://github.com/alagamai/cypress-e2e-testing-complete-framework/blob/main/images/html-report.png 'robot-html-report')
+![Robot-html-report](https://github.com/alagamai/Robot-Framework-FrontEnd-Samples/blob/master/images/report1.png 'robot-html-report')
 
 
 # HOW TO INSTALL ROBOT FRAMEWORK ON A MAC
