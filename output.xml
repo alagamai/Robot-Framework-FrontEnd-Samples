@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.0 on darwin)" generated="2024-03-19T18:22:35.227578" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="/Users/alagammainagappan/PycharmProjects/FrontEnd-Sample-Project/Robot-Scripts/test.robot">
+<kw name="Open Browser" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-03-19T18:22:35.298608" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${BROWSER}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-03-19T18:22:35.298525" elapsed="0.649781"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-03-19T18:22:35.948736" level="INFO">Opening url 'https://demo.nopcommerce.com/'</msg>
+<arg>https://demo.nopcommerce.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-03-19T18:22:35.948608" elapsed="3.414147"/>
+</kw>
+<status status="PASS" start="2024-03-19T18:22:35.298189" elapsed="4.064714"/>
+</kw>
+<test id="s1-t1" name="Scenario: Search for a product" line="16">
+<kw name="Given I am on e-commerce portal">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-03-19T18:22:39.363865" level="INFO">Opening url 'https://demo.nopcommerce.com/'</msg>
+<arg>https://demo.nopcommerce.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-03-19T18:22:39.363791" elapsed="0.523095"/>
+</kw>
+<status status="PASS" start="2024-03-19T18:22:39.363579" elapsed="0.523394"/>
+</kw>
+<kw name="When I search for the item &quot;Lenovo&quot;" source_name="I search for the item &quot;${item}&quot;">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T18:22:39.887761" level="INFO">Typing text 'Lenovo' into text field 'css:#small-searchterms'.</msg>
+<arg>${SEARCH_BAR}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T18:22:39.887473" elapsed="0.077332"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-03-19T18:22:39.965061" level="INFO">Clicking button 'css:.button-1.search-box-button'.</msg>
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T18:22:39.964923" elapsed="1.963928"/>
+</kw>
+<status status="PASS" start="2024-03-19T18:22:39.887244" elapsed="2.041689"/>
+</kw>
+<kw name="And I click on item &quot;Lenovo IdeaCentre 600 All-in-One PC&quot;" source_name="I click on item &quot;${item_name}&quot;">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-19T18:22:41.929428" level="INFO">Clicking element 'xpath://a[contains(text(), 'Lenovo IdeaCentre 600 All-in-One PC')]'.</msg>
+<arg>xpath://a[contains(text(), '${item_name}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T18:22:41.929303" elapsed="1.145088"/>
+</kw>
+<status status="PASS" start="2024-03-19T18:22:41.929132" elapsed="1.145338"/>
+</kw>
+<kw name="Then I should be taken to item detail page">
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-19T18:22:43.077470" level="INFO">Current location is 'https://demo.nopcommerce.com/lenovo-ideacentre-600-all-in-one-pc'.</msg>
+<arg>https://demo.nopcommerce.com/lenovo-ideacentre-600-all-in-one-pc</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-03-19T18:22:43.074813" elapsed="0.002701"/>
+</kw>
+<status status="PASS" start="2024-03-19T18:22:43.074647" elapsed="0.002915"/>
+</kw>
+<status status="PASS" start="2024-03-19T18:22:39.363011" elapsed="3.714647"/>
+</test>
+<test id="s1-t2" name="Scenario: Add to cart" line="23">
+<kw name="Given I am on product detail page lenovo-ideacentre-600-all-in-one-pc" source_name="I am on product detail page ${item_name}">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-03-19T18:22:43.078225" level="INFO">Opening url 'https://demo.nopcommerce.com/lenovo-ideacentre-600-all-in-one-pc'</msg>
+<arg>https://demo.nopcommerce.com/${item_name}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-03-19T18:22:43.078148" elapsed="0.462662"/>
+</kw>
+<status status="PASS" start="2024-03-19T18:22:43.078010" elapsed="0.462909"/>
+</kw>
+<kw name="When I add 2 items to cart">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>css:#product_enteredQuantity_3</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T18:22:43.541417" elapsed="0.022567"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T18:22:43.564126" level="INFO">Typing text '2' into text field 'css:#product_enteredQuantity_3'.</msg>
+<arg>css:#product_enteredQuantity_3</arg>
+<arg>2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T18:22:43.564055" elapsed="0.031239"/>
+</kw>
+<kw name="Get Cookies" owner="SeleniumLibrary">
+<msg time="2024-03-19T18:22:43.598187" level="INFO">${cookies} = _ga_SCT41TW89V=GS1.1.1710852759.1.1.1710852763.0.0.0; .Nop.Customer=06d6bcf2-998d-448d-87f8-a30b04512f6e; .Nop.Culture=c%3Den-US%7Cuic%3Den-US; .Nop.Antiforgery=CfDJ8DMg2lHGsLRMshXyoQI3WebiiS76Xnx0b1G...</msg>
+<var>${cookies}</var>
+<doc>Returns all cookies of the current page.</doc>
+<status status="PASS" start="2024-03-19T18:22:43.595426" elapsed="0.002777"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-03-19T18:22:43.598466" level="INFO">${cookie_dict} = {'_ga_SCT41TW89V': 'GS1.1.1710852759.1.1.1710852763.0.0.0', '.Nop.Customer': '06d6bcf2-998d-448d-87f8-a30b04512f6e', '.Nop.Culture': 'c%3Den-US%7Cuic%3Den-US', '.Nop.Antiforgery': 'CfDJ8DMg2lHGsLRMshX...</msg>
+<var>${cookie_dict}</var>
+<arg>dict(item.split('=') for item in "${cookies}".split('; '))</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-03-19T18:22:43.598280" elapsed="0.000198"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2024-03-19T18:22:43.598591" level="INFO">${nop_customer_value} = 06d6bcf2-998d-448d-87f8-a30b04512f6e</msg>
+<var>${nop_customer_value}</var>
+<arg>${cookie_dict}</arg>
+<arg>.Nop.Customer</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2024-03-19T18:22:43.598525" elapsed="0.000075"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-03-19T18:22:43.598715" level="INFO">06d6bcf2-998d-448d-87f8-a30b04512f6e</msg>
+<arg>${nop_customer_value}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-03-19T18:22:43.598643" elapsed="0.000099"/>
+</kw>
+<kw name="Get Dictionary Items" owner="Collections">
+<msg time="2024-03-19T18:22:43.598836" level="INFO">${values} = ['.Nop.Antiforgery', 'CfDJ8DMg2lHGsLRMshXyoQI3WebiiS76Xnx0b1G-tNcmU66YX7YMYgEO3CdW71dF64WqDx9eED8MNnOQGv67x30GQvN0YXyBzsOIU2S74Qx-P0NK4A3HSDDFruFiKH3Gw3Vu6F9W44r252ubacOZYC_JtHE', '.Nop.Culture', 'c%3...</msg>
+<var>${values}</var>
+<arg>${cookie_dict}</arg>
+<doc>Returns items of the given ``dictionary`` as a list.</doc>
+<status status="PASS" start="2024-03-19T18:22:43.598779" elapsed="0.000066"/>
+</kw>
+<kw name="Log Many" owner="BuiltIn">
+<msg time="2024-03-19T18:22:43.598939" level="INFO">['.Nop.Antiforgery', 'CfDJ8DMg2lHGsLRMshXyoQI3WebiiS76Xnx0b1G-tNcmU66YX7YMYgEO3CdW71dF64WqDx9eED8MNnOQGv67x30GQvN0YXyBzsOIU2S74Qx-P0NK4A3HSDDFruFiKH3Gw3Vu6F9W44r252ubacOZYC_JtHE', '.Nop.Culture', 'c%3Den-US%7Cuic%3Den-US', '.Nop.Customer', '06d6bcf2-998d-448d-87f8-a30b04512f6e', '.Nop.RecentlyViewedProducts', '3', '_ga', 'GA1.1.1987422985.1710852759', '_ga_SCT41TW89V', 'GS1.1.1710852759.1.1.1710852763.0.0.0']</msg>
+<arg>${values}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<status status="PASS" start="2024-03-19T18:22:43.598892" elapsed="0.000062"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-03-19T18:22:43.599047" level="INFO">Clicking button 'css:button#add-to-cart-button-3'.</msg>
+<arg>css:button#add-to-cart-button-3</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T18:22:43.598993" elapsed="0.028082"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-03-19T18:22:43.836738" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-03-19T18:22:43.627130" elapsed="0.209696"/>
+</kw>
+<status status="PASS" start="2024-03-19T18:22:43.541233" elapsed="0.295664"/>
+</kw>
+<kw name="Then cart qty should be 2 for the item lenovo-ideacentre-600-all-in-one-pc" source_name="cart qty should be 2 for the item ${item_name}">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-03-19T18:22:43.837304" level="INFO">Opening url 'https://demo.nopcommerce.com/lenovo-ideacentre-600-all-in-one-pc'</msg>
+<arg>https://demo.nopcommerce.com/${item_name}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-03-19T18:22:43.837239" elapsed="1.311463"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://span[@class='cart-qty']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-19T18:22:45.149068" elapsed="0.016881"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-03-19T18:22:45.296250" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-03-19T18:22:45.166073" elapsed="0.130294"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-19T18:22:45.305918" level="INFO">${cart_qty} = (2)</msg>
+<var>${cart_qty}</var>
+<arg>xpath://span[@class='cart-qty']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-19T18:22:45.296492" elapsed="0.009450"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-03-19T18:22:45.306116" level="INFO">(2)</msg>
+<arg>${cart_qty}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-03-19T18:22:45.306036" elapsed="0.000110"/>
+</kw>
+<status status="PASS" start="2024-03-19T18:22:43.837098" elapsed="1.469079"/>
+</kw>
+<status status="PASS" start="2024-03-19T18:22:43.077804" elapsed="2.228451"/>
+</test>
+<kw name="Close Browser" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-03-19T18:22:45.306622" elapsed="0.077322"/>
+</kw>
+<status status="PASS" start="2024-03-19T18:22:45.306535" elapsed="0.077565"/>
+</kw>
+<status status="PASS" start="2024-03-19T18:22:35.228113" elapsed="10.156017"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
