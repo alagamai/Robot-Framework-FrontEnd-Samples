@@ -8,10 +8,6 @@
 # HOW TO INSTALL ROBOT FRAMEWORK ON A MAC
 Follow these steps to set up Robot Framework on your Mac:
 
-Prerequisites:
-Visual Studio Code (VSCode):
-Download and install Visual Studio Code from here.
-
 Step 1: Install Python
 Install Python from the official website: Python Downloads.
 
