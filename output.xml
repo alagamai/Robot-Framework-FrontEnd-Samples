@@ -1,185 +1,236 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.0 on darwin)" generated="2024-03-19T18:22:35.227578" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.0 on darwin)" generated="2024-03-21T18:18:02.924787" rpa="false" schemaversion="5">
 <suite id="s1" name="Test" source="/Users/alagammainagappan/PycharmProjects/FrontEnd-Sample-Project/Robot-Scripts/test.robot">
-<kw name="Open Browser" type="SETUP">
+<test id="s1-t1" name="Scenario: Search for a product" line="14">
+<kw name="Open Browser" owner="resources" type="SETUP">
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-03-19T18:22:35.298608" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-03-21T18:18:02.998892" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${BROWSER}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-03-19T18:22:35.298525" elapsed="0.649781"/>
+<status status="PASS" start="2024-03-21T18:18:02.998806" elapsed="4.488596"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-03-19T18:22:35.948736" level="INFO">Opening url 'https://demo.nopcommerce.com/'</msg>
+<msg time="2024-03-21T18:18:07.488329" level="INFO">Opening url 'https://demo.nopcommerce.com/'</msg>
 <arg>https://demo.nopcommerce.com/</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-03-19T18:22:35.948608" elapsed="3.414147"/>
+<status status="PASS" start="2024-03-21T18:18:07.487976" elapsed="2.355783"/>
 </kw>
-<status status="PASS" start="2024-03-19T18:22:35.298189" elapsed="4.064714"/>
+<status status="PASS" start="2024-03-21T18:18:02.998377" elapsed="6.845494"/>
 </kw>
-<test id="s1-t1" name="Scenario: Search for a product" line="16">
 <kw name="Given I am on e-commerce portal">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-03-19T18:22:39.363865" level="INFO">Opening url 'https://demo.nopcommerce.com/'</msg>
+<msg time="2024-03-21T18:18:09.844352" level="INFO">Opening url 'https://demo.nopcommerce.com/'</msg>
 <arg>https://demo.nopcommerce.com/</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-03-19T18:22:39.363791" elapsed="0.523095"/>
+<status status="PASS" start="2024-03-21T18:18:09.844293" elapsed="0.766229"/>
 </kw>
-<status status="PASS" start="2024-03-19T18:22:39.363579" elapsed="0.523394"/>
+<status status="PASS" start="2024-03-21T18:18:09.844135" elapsed="0.766554"/>
 </kw>
 <kw name="When I search for the item &quot;Lenovo&quot;" source_name="I search for the item &quot;${item}&quot;">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-19T18:22:39.887761" level="INFO">Typing text 'Lenovo' into text field 'css:#small-searchterms'.</msg>
+<msg time="2024-03-21T18:18:10.611423" level="INFO">Typing text 'Lenovo' into text field 'css:#small-searchterms'.</msg>
 <arg>${SEARCH_BAR}</arg>
 <arg>${item}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-19T18:22:39.887473" elapsed="0.077332"/>
+<status status="PASS" start="2024-03-21T18:18:10.611075" elapsed="0.441705"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-19T18:22:39.965061" level="INFO">Clicking button 'css:.button-1.search-box-button'.</msg>
+<msg time="2024-03-21T18:18:11.053112" level="INFO">Clicking button 'css:.button-1.search-box-button'.</msg>
 <arg>${SEARCH_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-19T18:22:39.964923" elapsed="1.963928"/>
+<status status="PASS" start="2024-03-21T18:18:11.052938" elapsed="1.116250"/>
 </kw>
-<status status="PASS" start="2024-03-19T18:22:39.887244" elapsed="2.041689"/>
+<status status="PASS" start="2024-03-21T18:18:10.610912" elapsed="1.558373"/>
 </kw>
-<kw name="And I click on item &quot;Lenovo IdeaCentre 600 All-in-One PC&quot;" source_name="I click on item &quot;${item_name}&quot;">
+<kw name="And I click on item">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-03-19T18:22:41.929428" level="INFO">Clicking element 'xpath://a[contains(text(), 'Lenovo IdeaCentre 600 All-in-One PC')]'.</msg>
-<arg>xpath://a[contains(text(), '${item_name}')]</arg>
+<msg time="2024-03-21T18:18:12.169734" level="INFO">Clicking element 'xpath://a[contains(text(), "Lenovo IdeaCentre 600 All-in-One PC")]'.</msg>
+<arg>xpath://a[contains(text(), ${item_name})]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-19T18:22:41.929303" elapsed="1.145088"/>
+<status status="PASS" start="2024-03-21T18:18:12.169627" elapsed="0.923047"/>
 </kw>
-<status status="PASS" start="2024-03-19T18:22:41.929132" elapsed="1.145338"/>
+<arg>"Lenovo IdeaCentre 600 All-in-One PC"</arg>
+<status status="PASS" start="2024-03-21T18:18:12.169465" elapsed="0.923288"/>
 </kw>
 <kw name="Then I should be taken to item detail page">
 <kw name="Location Should Be" owner="SeleniumLibrary">
-<msg time="2024-03-19T18:22:43.077470" level="INFO">Current location is 'https://demo.nopcommerce.com/lenovo-ideacentre-600-all-in-one-pc'.</msg>
+<msg time="2024-03-21T18:18:13.126795" level="INFO">Current location is 'https://demo.nopcommerce.com/lenovo-ideacentre-600-all-in-one-pc'.</msg>
 <arg>https://demo.nopcommerce.com/lenovo-ideacentre-600-all-in-one-pc</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<status status="PASS" start="2024-03-19T18:22:43.074813" elapsed="0.002701"/>
+<status status="PASS" start="2024-03-21T18:18:13.093152" elapsed="0.033692"/>
 </kw>
-<status status="PASS" start="2024-03-19T18:22:43.074647" elapsed="0.002915"/>
+<status status="PASS" start="2024-03-21T18:18:13.092981" elapsed="0.033913"/>
 </kw>
-<status status="PASS" start="2024-03-19T18:22:39.363011" elapsed="3.714647"/>
+<kw name="Close Browser" owner="resources" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-03-21T18:18:13.127217" elapsed="0.074654"/>
+</kw>
+<status status="PASS" start="2024-03-21T18:18:13.127080" elapsed="0.074864"/>
+</kw>
+<status status="PASS" start="2024-03-21T18:18:02.998114" elapsed="10.203889"/>
 </test>
-<test id="s1-t2" name="Scenario: Add to cart" line="23">
+<test id="s1-t2" name="Scenario: Add to cart" line="21">
+<kw name="Open Browser" owner="resources" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-03-21T18:18:13.202613" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${BROWSER}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-03-21T18:18:13.202530" elapsed="4.384917"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-03-21T18:18:17.587856" level="INFO">Opening url 'https://demo.nopcommerce.com/'</msg>
+<arg>https://demo.nopcommerce.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-03-21T18:18:17.587724" elapsed="1.195802"/>
+</kw>
+<status status="PASS" start="2024-03-21T18:18:13.202389" elapsed="5.581233"/>
+</kw>
 <kw name="Given I am on product detail page lenovo-ideacentre-600-all-in-one-pc" source_name="I am on product detail page ${item_name}">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-03-19T18:22:43.078225" level="INFO">Opening url 'https://demo.nopcommerce.com/lenovo-ideacentre-600-all-in-one-pc'</msg>
+<msg time="2024-03-21T18:18:18.784109" level="INFO">Opening url 'https://demo.nopcommerce.com/lenovo-ideacentre-600-all-in-one-pc'</msg>
 <arg>https://demo.nopcommerce.com/${item_name}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-03-19T18:22:43.078148" elapsed="0.462662"/>
+<status status="PASS" start="2024-03-21T18:18:18.784036" elapsed="1.004687"/>
 </kw>
-<status status="PASS" start="2024-03-19T18:22:43.078010" elapsed="0.462909"/>
+<status status="PASS" start="2024-03-21T18:18:18.783864" elapsed="1.004933"/>
 </kw>
 <kw name="When I add 2 items to cart">
 <kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>css:#product_enteredQuantity_3</arg>
+<arg>${ENTER_QTY}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-19T18:22:43.541417" elapsed="0.022567"/>
+<status status="PASS" start="2024-03-21T18:18:19.789171" elapsed="0.205464"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-03-19T18:22:43.564126" level="INFO">Typing text '2' into text field 'css:#product_enteredQuantity_3'.</msg>
-<arg>css:#product_enteredQuantity_3</arg>
+<msg time="2024-03-21T18:18:19.994888" level="INFO">Typing text '2' into text field 'css:#product_enteredQuantity_3'.</msg>
+<arg>${ENTER_QTY}</arg>
 <arg>2</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-19T18:22:43.564055" elapsed="0.031239"/>
+<status status="PASS" start="2024-03-21T18:18:19.994757" elapsed="0.156263"/>
 </kw>
 <kw name="Get Cookies" owner="SeleniumLibrary">
-<msg time="2024-03-19T18:22:43.598187" level="INFO">${cookies} = _ga_SCT41TW89V=GS1.1.1710852759.1.1.1710852763.0.0.0; .Nop.Customer=06d6bcf2-998d-448d-87f8-a30b04512f6e; .Nop.Culture=c%3Den-US%7Cuic%3Den-US; .Nop.Antiforgery=CfDJ8DMg2lHGsLRMshXyoQI3WebiiS76Xnx0b1G...</msg>
+<msg time="2024-03-21T18:18:20.155777" level="INFO">${cookies} = _ga_SCT41TW89V=GS1.1.1711025299.1.0.1711025299.0.0.0; .Nop.Customer=c16fd2f2-efc8-460c-8b53-e277ac4fd9bc; .Nop.Culture=c%3Den-US%7Cuic%3Den-US; .Nop.Antiforgery=CfDJ8DMg2lHGsLRMshXyoQI3Weaiv9asrud9Ibe...</msg>
 <var>${cookies}</var>
 <doc>Returns all cookies of the current page.</doc>
-<status status="PASS" start="2024-03-19T18:22:43.595426" elapsed="0.002777"/>
+<status status="PASS" start="2024-03-21T18:18:20.151156" elapsed="0.004650"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-03-19T18:22:43.598466" level="INFO">${cookie_dict} = {'_ga_SCT41TW89V': 'GS1.1.1710852759.1.1.1710852763.0.0.0', '.Nop.Customer': '06d6bcf2-998d-448d-87f8-a30b04512f6e', '.Nop.Culture': 'c%3Den-US%7Cuic%3Den-US', '.Nop.Antiforgery': 'CfDJ8DMg2lHGsLRMshX...</msg>
+<msg time="2024-03-21T18:18:20.156160" level="INFO">${cookie_dict} = {'_ga_SCT41TW89V': 'GS1.1.1711025299.1.0.1711025299.0.0.0', '.Nop.Customer': 'c16fd2f2-efc8-460c-8b53-e277ac4fd9bc', '.Nop.Culture': 'c%3Den-US%7Cuic%3Den-US', '.Nop.Antiforgery': 'CfDJ8DMg2lHGsLRMshX...</msg>
 <var>${cookie_dict}</var>
 <arg>dict(item.split('=') for item in "${cookies}".split('; '))</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-03-19T18:22:43.598280" elapsed="0.000198"/>
+<status status="PASS" start="2024-03-21T18:18:20.155915" elapsed="0.000257"/>
 </kw>
 <kw name="Get From Dictionary" owner="Collections">
-<msg time="2024-03-19T18:22:43.598591" level="INFO">${nop_customer_value} = 06d6bcf2-998d-448d-87f8-a30b04512f6e</msg>
+<msg time="2024-03-21T18:18:20.156304" level="INFO">${nop_customer_value} = c16fd2f2-efc8-460c-8b53-e277ac4fd9bc</msg>
 <var>${nop_customer_value}</var>
 <arg>${cookie_dict}</arg>
 <arg>.Nop.Customer</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2024-03-19T18:22:43.598525" elapsed="0.000075"/>
+<status status="PASS" start="2024-03-21T18:18:20.156233" elapsed="0.000080"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-03-19T18:22:43.598715" level="INFO">06d6bcf2-998d-448d-87f8-a30b04512f6e</msg>
+<msg time="2024-03-21T18:18:20.156424" level="INFO">c16fd2f2-efc8-460c-8b53-e277ac4fd9bc</msg>
 <arg>${nop_customer_value}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-03-19T18:22:43.598643" elapsed="0.000099"/>
+<status status="PASS" start="2024-03-21T18:18:20.156367" elapsed="0.000072"/>
 </kw>
 <kw name="Get Dictionary Items" owner="Collections">
-<msg time="2024-03-19T18:22:43.598836" level="INFO">${values} = ['.Nop.Antiforgery', 'CfDJ8DMg2lHGsLRMshXyoQI3WebiiS76Xnx0b1G-tNcmU66YX7YMYgEO3CdW71dF64WqDx9eED8MNnOQGv67x30GQvN0YXyBzsOIU2S74Qx-P0NK4A3HSDDFruFiKH3Gw3Vu6F9W44r252ubacOZYC_JtHE', '.Nop.Culture', 'c%3...</msg>
+<msg time="2024-03-21T18:18:20.156539" level="INFO">${values} = ['.Nop.Antiforgery', 'CfDJ8DMg2lHGsLRMshXyoQI3Weaiv9asrud9Ibep-ECRdfyoHJkqAVYEvixijpDu-e86KVfiYfzPouxbbG4lxnwA73nnM0mmA0kTccUOJYitU2TrG2QqViiocZYtX0TPAfr-_NcfDecc1rn_v0KQdZF8q7Q', '.Nop.Culture', 'c%3...</msg>
 <var>${values}</var>
 <arg>${cookie_dict}</arg>
 <doc>Returns items of the given ``dictionary`` as a list.</doc>
-<status status="PASS" start="2024-03-19T18:22:43.598779" elapsed="0.000066"/>
+<status status="PASS" start="2024-03-21T18:18:20.156480" elapsed="0.000168"/>
 </kw>
 <kw name="Log Many" owner="BuiltIn">
-<msg time="2024-03-19T18:22:43.598939" level="INFO">['.Nop.Antiforgery', 'CfDJ8DMg2lHGsLRMshXyoQI3WebiiS76Xnx0b1G-tNcmU66YX7YMYgEO3CdW71dF64WqDx9eED8MNnOQGv67x30GQvN0YXyBzsOIU2S74Qx-P0NK4A3HSDDFruFiKH3Gw3Vu6F9W44r252ubacOZYC_JtHE', '.Nop.Culture', 'c%3Den-US%7Cuic%3Den-US', '.Nop.Customer', '06d6bcf2-998d-448d-87f8-a30b04512f6e', '.Nop.RecentlyViewedProducts', '3', '_ga', 'GA1.1.1987422985.1710852759', '_ga_SCT41TW89V', 'GS1.1.1710852759.1.1.1710852763.0.0.0']</msg>
+<msg time="2024-03-21T18:18:20.156766" level="INFO">['.Nop.Antiforgery', 'CfDJ8DMg2lHGsLRMshXyoQI3Weaiv9asrud9Ibep-ECRdfyoHJkqAVYEvixijpDu-e86KVfiYfzPouxbbG4lxnwA73nnM0mmA0kTccUOJYitU2TrG2QqViiocZYtX0TPAfr-_NcfDecc1rn_v0KQdZF8q7Q', '.Nop.Culture', 'c%3Den-US%7Cuic%3Den-US', '.Nop.Customer', 'c16fd2f2-efc8-460c-8b53-e277ac4fd9bc', '.Nop.RecentlyViewedProducts', '3', '_ga', 'GA1.1.102550602.1711025300', '_ga_SCT41TW89V', 'GS1.1.1711025299.1.0.1711025299.0.0.0']</msg>
 <arg>${values}</arg>
 <doc>Logs the given messages as separate entries using the INFO level.</doc>
-<status status="PASS" start="2024-03-19T18:22:43.598892" elapsed="0.000062"/>
+<status status="PASS" start="2024-03-21T18:18:20.156707" elapsed="0.000075"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-03-19T18:22:43.599047" level="INFO">Clicking button 'css:button#add-to-cart-button-3'.</msg>
-<arg>css:button#add-to-cart-button-3</arg>
+<msg time="2024-03-21T18:18:20.156923" level="INFO">Clicking button 'css:button#add-to-cart-button-3'.</msg>
+<arg>${ADD_TO_CART_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-19T18:22:43.598993" elapsed="0.028082"/>
+<status status="PASS" start="2024-03-21T18:18:20.156828" elapsed="0.157304"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SNACK_BAR1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-21T18:18:20.314287" elapsed="0.499295"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-21T18:18:20.837378" level="INFO">${content} = The product has been added to your shopping cart</msg>
+<var>${content}</var>
+<arg>${SNACK_BAR1}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T18:18:20.813700" elapsed="0.023703"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${content}</arg>
+<arg>The product has been added to your shopping cart</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-03-21T18:18:20.837522" elapsed="0.000115"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-03-19T18:22:43.836738" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-03-21T18:18:21.168967" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-03-19T18:22:43.627130" elapsed="0.209696"/>
+<status status="PASS" start="2024-03-21T18:18:20.837700" elapsed="0.331323"/>
 </kw>
-<status status="PASS" start="2024-03-19T18:22:43.541233" elapsed="0.295664"/>
+<status status="PASS" start="2024-03-21T18:18:19.789016" elapsed="1.380061"/>
 </kw>
 <kw name="Then cart qty should be 2 for the item lenovo-ideacentre-600-all-in-one-pc" source_name="cart qty should be 2 for the item ${item_name}">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-03-19T18:22:43.837304" level="INFO">Opening url 'https://demo.nopcommerce.com/lenovo-ideacentre-600-all-in-one-pc'</msg>
+<msg time="2024-03-21T18:18:21.169442" level="INFO">Opening url 'https://demo.nopcommerce.com/lenovo-ideacentre-600-all-in-one-pc'</msg>
 <arg>https://demo.nopcommerce.com/${item_name}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-03-19T18:22:43.837239" elapsed="1.311463"/>
+<status status="PASS" start="2024-03-21T18:18:21.169379" elapsed="0.813832"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath://span[@class='cart-qty']</arg>
+<arg>${SHOPPING_CART}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-03-19T18:22:45.149068" elapsed="0.016881"/>
+<status status="PASS" start="2024-03-21T18:18:21.983336" elapsed="0.104651"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-03-19T18:22:45.296250" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-03-21T18:18:22.271209" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-03-19T18:22:45.166073" elapsed="0.130294"/>
+<status status="PASS" start="2024-03-21T18:18:22.088100" elapsed="0.183164"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-03-19T18:22:45.305918" level="INFO">${cart_qty} = (2)</msg>
+<msg time="2024-03-21T18:18:22.284674" level="INFO">${cart_qty} = (2)</msg>
 <var>${cart_qty}</var>
-<arg>xpath://span[@class='cart-qty']</arg>
+<arg>${SHOPPING_CART}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-03-19T18:22:45.296492" elapsed="0.009450"/>
+<status status="PASS" start="2024-03-21T18:18:22.271363" elapsed="0.013332"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${cart_qty}</arg>
+<arg>(2)</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-03-21T18:18:22.284795" elapsed="0.000106"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-03-19T18:22:45.306116" level="INFO">(2)</msg>
+<msg time="2024-03-21T18:18:22.284998" level="INFO">(2)</msg>
 <arg>${cart_qty}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-03-19T18:22:45.306036" elapsed="0.000110"/>
+<status status="PASS" start="2024-03-21T18:18:22.284954" elapsed="0.000059"/>
 </kw>
-<status status="PASS" start="2024-03-19T18:22:43.837098" elapsed="1.469079"/>
+<status status="PASS" start="2024-03-21T18:18:21.169241" elapsed="1.115801"/>
 </kw>
-<status status="PASS" start="2024-03-19T18:22:43.077804" elapsed="2.228451"/>
-</test>
-<kw name="Close Browser" type="TEARDOWN">
+<kw name="Close Browser" owner="resources" type="TEARDOWN">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-03-19T18:22:45.306622" elapsed="0.077322"/>
+<status status="PASS" start="2024-03-21T18:18:22.285296" elapsed="0.088083"/>
 </kw>
-<status status="PASS" start="2024-03-19T18:22:45.306535" elapsed="0.077565"/>
+<status status="PASS" start="2024-03-21T18:18:22.285187" elapsed="0.088803"/>
 </kw>
-<status status="PASS" start="2024-03-19T18:22:35.228113" elapsed="10.156017"/>
+<status status="PASS" start="2024-03-21T18:18:13.202201" elapsed="9.172556"/>
+</test>
+<doc>To place an order from ecom portal
+  It demos usage of locators using id, css, xpath
+  Usage of Gherkin Syntax test cases, Suite setup / teardown, variables
+   usage of asserts</doc>
+<status status="PASS" start="2024-03-21T18:18:02.925319" elapsed="19.452468"/>
 </suite>
 <statistics>
 <total>
